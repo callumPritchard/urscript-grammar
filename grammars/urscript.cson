@@ -1,0 +1,52 @@
+scopeName: 'source.urscript'
+name: 'urscript'
+fileTypes: ['script', 'urscript']
+limitLineLength: false
+
+patterns: [
+  {
+    comment: 'find urscript comments'
+    name: 'comment.line.urscript'
+    match: "#'.*'"
+  }
+  {
+    comment: ''
+    match: '(\\s*def )(\\w*)(.*:)'
+    captures:
+      1:
+        name: 'keyword.function.urscript'
+      2:
+        name: 'entity.name.function.urscript'
+  }
+  {
+    comment: ''
+    match: '(\\w*)(\\()'
+    captures:
+      1:
+        name: 'entity.name.function.urscript'
+  }
+  {
+    comment: 'Flow control keywords'
+    match: '\\b(end|break|continue|else|elif|if|return|while)\\b'
+    name: 'keyword.control.urscript'
+  }
+  {
+    match: '\\b(global|local)\\b'
+    name: 'entity.name.function.urscript'
+  }
+  {
+    comment: 'Integers'
+    match: '\\b((0x[0-9a-fA-F]+)|(0[0-7]+i?)|(\\d+([Ee]\\d+)?i?)|(\\d+[Ee][\-\+]\\d+i?))\\b'
+    name: 'constant.numeric.integer.urscript'
+  }
+  {
+    comment: 'Language constants'
+    match: '\\b(True|False)\\b'
+    name: 'constant.language.urscript'
+  }
+  {
+    comment: 'Floating-point literals'
+    match: '(\\.\\d+([Ee][\-\+]\\d+)?i?)\\b|\\b\\d+\\.\\d*(([Ee][\-\+]\\d+)?i?\\b)?'
+    name: 'constant.numeric.floating-point.urscript'
+  }
+]

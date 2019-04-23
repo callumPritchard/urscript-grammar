@@ -1,0 +1,20 @@
+{
+  "name": "urscript-formatter",
+  "main": "./lib/urscript-formatter",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+    "syntax",
+    "grammar"
+  ],
+  "activationCommands": {
+    "atom-workspace": "urscript-formatter:toggle"
+  },
+  "repository": "https://github.com/atom/urscript-formatter",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
