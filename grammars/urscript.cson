@@ -49,4 +49,20 @@ patterns: [
     match: '(\\.\\d+([Ee][\-\+]\\d+)?i?)\\b|\\b\\d+\\.\\d*(([Ee][\-\+]\\d+)?i?\\b)?'
     name: 'constant.numeric.floating-point.urscript'
   }
+  {
+    begin: '(")([^"]*)'
+    beginCaptures:
+      '0':
+        name: 'string.quoted.single.urscript'
+      '1':
+        name: 'string.quoted.single.urscript'
+      '2':
+        name: 'string.quoted.single.urscript'
+    end: '(")'
+    endCaptures:
+      '0':
+        name: 'string.quoted.single.urscript'
+      '1':
+        name: 'string.quoted.single.urscript'
+  }
 ]
